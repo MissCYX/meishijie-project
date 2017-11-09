@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>美食杰</title>
+    <!--初始化样式  -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- 头部和底部公共的样式 -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- 首页-->
+    <link rel="stylesheet" href="css/shouyeJRTJ.css"/>
+    <!-- jquary-->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <!--    <script src="js/jquery-1.9.0.min.js"></script>-->
+    <script src="js/jinRiTuiJian.js"></script>
+</head>
+<body>
+<!--   头部 start     -->
+<div id="head" class="gudingNav">
+
+    <!-- 版心-->
+    <div class="container clearfix">
+        <!-- logo-->
+        <div class=" f logo">
+            <a href="index.html">
+                <img src="img/logo.png" width="150" height="150">
+            </a>
+        </div>
+
+        <!-- 搜索框-->
+        <div class=" f search">
+            <input placeholder="请输入菜名/食材/菜单/作者" type="text">
+            <input type="button" value="搜索">
+        </div>
+        <!-- 登录注册导航栏-->
+        <div class=" f login">
+            <ul>
+                <li><a href="#">注册</a></li>
+                <li><a href="#">登录</a></li>
+                <li><span class="weibo"></span><a href="#">微博登录</a></li>
+                <li><span class="qq"></span><a href="#">qq登录</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--  头部 end   -->
+
+<!--  导航栏 start    -->
+
+<div id="nav">
+    <!-- 版心-->
+    <div class="container  clearfix">
+        <!--导航部分 -->
+        <div class="daohang">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li class="one"><a href="wu2/meishidaren2.html">美食达人</a></li>
+                <li class="two"><a href="wu/html/派系test1.html">中外食界</a></li>
+                <li><a href="mspic/index.html">美食图集</a></li>
+                <li><a href="picWall/index.html">论坛天地</a></li>
+                <li><a href="#">饮食健康</a></li>
+                <li><a href="#">家居馆</a></li>
+                <li><a href="puzzleGame/index.html">不要动我</a></li>
+            </ul>
+        </div>
+        <div class="cxmw">
+            <img src="img/changxiangmeiwei.jpg" width="300" height="100"/></a>
+        </div>
+    </div>
+</div>
+
+<!--导航栏 end-->
+
+<!--今日推荐 start-->
+<div id="jinRiTuiJian" class="clearfix gudingNav">
+    <div class="wuDaCan clearfix">
+        <div class="zaocan rican">
+            <h2>今日早餐推荐：五彩缤纷，营养早餐送给你</h2>
+            <ul>
+                <li><img src="img/zaocan1.jpg" alt=""/><span><h3><a href="#">香肠榨菜鸡蛋饼</a></h3><p>营养丰富又美味，最适合当早餐</p></span></li>
+                <li><img src="img/zaocan2.jpg" alt=""/><span><h3><a href="#">养胃小米粥</a></h3><p>养胃又好喝，喝上一碗真舒坦</p></span></li>
+                <li><img src="img/zaocan3.jpg" alt=""/><span><h3><a href="#">枸杞菠菜塔</a></h3><p>满满营养，颜值又高，全家都称赞</p></span></li>
+            </ul>
+            <span></span>
+        </div>
+        <div class="wucan rican">
+            <h2>今日午餐推荐：隔着屏幕都能闻到的香气</h2>
+            <ul>
+                <li><img src="img/wucan1.jpg" alt=""/><span><h3><a href="#">土豆鸡块</a></h3><p>土豆配鸡块，好吃到起飞</p></span></li>
+                <li><img src="img/wucan2.jpg" alt=""/><span><h3><a href="#">香酥小黄鱼</a></h3><p>肉质鲜嫩，味道鲜美，大人小孩都爱吃</p></span></li>
+                <li><img src="img/wucan3.jpg" alt=""/><span><h3><a href="#">香辣炒豆腐</a></h3><p>烤鱼味的炒豆腐，看起来就超级有食欲</p></span></li>
+            </ul>
+        </div>
+        <div class="xiawucha rican">
+            <h2>今日下午茶推荐：看着就好吃的下午茶，轻松搞定</h2>
+            <ul>
+                <li><img src="img/xiawucha1.jpg" alt=""/><span><h3><a href="#">粉色椰蓉小方</a></h3><p>不用烤箱做甜品，高颜值好味道</p></span></li>
+                <li><img src="img/xiawucha2.jpg" alt=""/><span><h3><a href="#">蓝莓山药泥</a></h3><p>口感吃起来就和冰淇淋一样</p></span></li>
+                <li><img src="img/xiawucha3.jpg" alt=""/><span><h3><a href="#">牛奶蜜豆西米露</a></h3><p>QQ的西米，再搭配甜甜的蜜红豆，太赞了</p></span></li>
+            </ul>
+        </div>
+        <div class="wancan rican">
+            <h2>今日晚餐推荐：下饭好菜，大人小孩都爱吃</h2>
+            <ul>
+                <li><img src="img/wancan1.jpg" alt=""/><span><h3><a href="#">秘制糖醋排骨</a></h3><p>一口米饭伴着糖醋汁，口口都是享受</p></span></li>
+                <li><img src="img/wancan2.jpg" alt=""/><span><h3><a href="#">开胃脆皮茄子</a></h3><p>茄子新吃法，酸甜可口保你喜欢</p></span></li>
+                <li><img src="img/wancan3.jpg" alt=""/><span><h3><a href="#">酸菜土豆片</a></h3><p>酸酸辣辣的口味，特别开胃又下饭</p></span></li>
+            </ul>
+        </div>
+        <div class="yexiao rican">
+            <h2>今日夜宵推荐：好吃不长肉，放心享用</h2>
+            <ul>
+                <li><img src="img/yexiao1.jpg" alt=""/><span><h3><a href="#">汤面蒸饺</a></h3><p>皮薄馅嫩，鲜美多汁，连吃好几个</p></span></li>
+                <li><img src="img/yexiao2.jpg" alt=""/><span><h3><a href="#">美味煲仔饭</a></h3><p>有菜有饭，咸香浓郁，美味一锅出</p></span></li>
+                <li><img src="img/yexiao3.jpg" alt=""/><span><h3><a href="#">红油抄手</a></h3><p>有汤有主食，来上一碗满满的幸福</p></span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="shizhong">
+        <span class="fl zuoyou"></span>
+        <ol class="fl">
+            <li><span>早餐时间</span></li>
+            <li><span>午餐时间</span></li>
+            <li><span>下午茶时间</span></li>
+            <li><span>晚餐时间</span></li>
+            <li><span>夜宵时间</span></li>
+        </ol>
+        <span class="fr zuoyou"></span>
+        <span class="shijian si">4:00</span>
+        <span class="shijian shi">10:00</span>
+        <span class="shijian shisi">14:00</span>
+        <span class="shijian shiliu">16:00</span>
+        <span class="shijian ershiyi">21:00</span>
+        <span class="shijian si2">4:00</span>
+    </div>
+    <div class="jrtjMain">
+    </div>
+    <div class="jrtjzuo"></div>
+    <div class="jrtjyou"></div>
+    <div class="zuoyouAnJian">
+        <span class="left"></span>
+        <span class="right"></span>
+    </div>
+</div>
+
+<!--今日推荐 end-->
+
+<!--四大菜系start-->
+<div id="fourCai" class="container gudingNav">
+    <div class="fContain">
+        <div class="fHead">
+            <div class="fl">了解餐饮文化大国，看中华四大菜系</div>
+            <div class="fr"><a href="#">更多>></a></div>
+        </div>
+        <div class="content">
+            <div class="l-pic-index"></div>
+            <div class="r-pic-index"></div>
+            <div class="l-bg-index"></div>
+            <div class="r-bg-index"></div>
+        </div>
+        <div class="left"></div>
+    </div>
+</div>
+<!--四大菜系end-->
+<!--最新菜谱start-->
+<div id="newCai" class="container gudingNav">
+    <div class="newCaiContain">
+        <div class="newCaiHead">
+            <div class="fl">菜单是你的一桌饭</div>
+            <div class="fr"><a href="#">更多>></a></div>
+        </div>
+        <div class="newCaiMain">
+            <div class="fl">
+                <ul>
+                    <li><img src="img/newCai1.jpg" alt=""/></li>
+                    <li><img src="img/newCai2.jpg" alt=""/></li>
+                    <li><img src="img/newCai3.jpg" alt=""/></li>
+                    <li><img src="img/newCai4.jpg" alt=""/></li>
+                </ul>
+                <!--箭头-->
+                <div class="arrow">
+                    <span class="arrow-left">&lt;</span>
+                    <span class="arrow-right">&gt;</span>
+                </div>
+            </div>
+            <div class="baiyechuang fr">
+                <img class="zhentu" src="img/newCai5.png" alt=""/>
+            </div>
+        </div>
+    </div>
+</div>
+<!--最新菜谱end-->
+
+
+<!--9月，中秋时节 start-->
+<div id="zhongQiuJiuYue" class="container clearfix gudingNav">
+    <!-- 标题-->
+    <div class="biaoti">9月，中秋时节缓秋乏</div>
+    <!-- 手风琴-->
+    <div class="zqjymain">
+        <ul>
+            <li><img class="pimg" src="img/jiuyue%20(1).jpg" alt=""/></li>
+            <li><img class="pimg" src="img/jiuyue%20(2).jpg" alt=""/></li>
+            <li><img class="pimg" src="img/jiuyue%20(3).jpg" alt=""/></li>
+            <li><img class="pimg" src="img/shousi.jpg" alt=""/></li>
+            <li><img class="pimg" src="img/wugege.jpg" alt=""/></li>
+        </ul>
+    </div>
+</div>
+<div id="outerdiv" class="public">
+    <div id="innerdiv" class="dw">
+        <img class="bigimg" src="img/susibao1.png"/>
+        <img class="bigimg" src="img/qixi1.png"/>
+        <img class="bigimg" src="img/shanyao1.png"/>
+        <img class="bigimg" src="img/shouSi1.png"/>
+        <img class="bigimg" src="img/wuGeGe1.png"/>
+    </div>
+</div>
+<!--9月，中秋时节 end-->
+
+
+<!--各地小吃  start-->
+<div id="geDiXiaoChi" class="container clearfix gudingNav">
+    <div class="gdxcbt">不出家门，也能吃遍大江南北</div>
+    <div class="gdxcmain">
+        <!-- 上面的导航栏-->
+        <ul>
+            <li>北京小吃</li>
+            <li>天津小吃</li>
+            <li>四川小吃</li>
+            <li>陕西小吃</li>
+            <li>广东小吃</li>
+            <li>湖南小吃</li>
+            <li><a href="###">更多>></a></li>
+        </ul>
+        <!-- 下面需要显示的div-->
+        <div class="xcmeishi">
+            <div class="diqu selected">
+                <div class="img"><img src="img/lvdagun.jpg" alt=""/>
+
+                    <div><h5>驴打滚</h5><span>人气值：234</span>步骤：5 难易度：☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/youcha.jpg" alt=""/>
+
+                    <div><h5>油茶</h5><span>人气值：234</span>步骤：7 难易度：☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/炸酱面.jpg" alt=""/>
+
+                    <div><h5> 老北京炸酱面</h5><span>人气值：234</span>步骤：4 难易度：☆☆</div>
+                </div>
+                <div class="img"><img src="img/wandouhuang.jpg" alt=""/>
+
+                    <div><h5> 豌豆黄</h5><span>人气值：234</span>步骤：7 难易度：☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/beijing5.jpg" alt=""/>
+
+                    <div><h5>老北京炒红果</h5><span>人气值：234</span>步骤：6 难易度：☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/beijing6.jpg" alt=""/>
+
+                    <div><h5>老北京开口笑</h5><span>人气值：234</span>步骤: 4 难易度：☆☆</div>
+                </div>
+                <div class="img"><img src="img/beijing7.jpg" alt=""/>
+
+                    <div><h5>老北京炸灌肠</h5><span>人气值：234</span>步骤: 8 难易度：☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/beijing8.jpg" alt=""/>
+
+                    <div><h5>杏仁豆腐</h5><span>人气值：234</span>步骤: 4 难易度：☆☆</div>
+                </div>
+
+            </div>
+            <div class="diqu">
+                <div class="img"><img src="img/tianjin1.jpg" alt=""/>
+
+                    <div><h5>元气五谷·煎饼果子</h5><span>人气值：234</span>步骤：6 难易度：☆☆</div>
+                </div>
+                <div class="img"><img src="img/tianjin2.jpg" alt=""/>
+
+                    <div><h5>天津风味羊汤</h5><span>人气值：234</span>步骤：7 难易度：☆☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/tianjin3'.jpg" alt=""/>
+
+                    <div><h5>初二福寿绵绵的打卤面</h5><span>人气值：234</span>步骤：5 难易度：☆☆</div>
+                </div>
+                <div class="img"><img src="img/tianjin6.jpg" alt=""/>
+
+                    <div><h5>天津特色&石头门坎素包</h5><span>人气值：234</span>步骤：9 难易度：☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/tianjin4.jpg" alt=""/>
+
+                    <div><h5>天津冬菜</h5><span>人气值：234</span>步骤：9 难易度：☆☆</div>
+                </div>
+                <div class="img"><img src="img/tianjin5.jpg" alt=""/>
+
+                    <div><h5>#天津小吃#麻团</h5><span>人气值：234</span>步骤：5 难易度：☆☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/tianjin7.jpg" alt=""/>
+
+                    <div><h5>#天津小吃#糖皮儿</h5><span>人气值：234</span>步骤：5 难易度：☆☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/tianjin8.jpg" alt=""/>
+
+                    <div><h5>#天津名吃#狗不理</h5><span>人气值：234</span>步骤：5 难易度：☆☆☆☆</div>
+                </div>
+            </div>
+            <div class="diqu">
+                <div class="img"><img src="img/sichuan1.jpg" alt=""/>
+
+                    <div><h5>@四川冒菜@</h5><span>人气值：234</span>步骤：6 难易度：☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/sichuan2.jpg" alt=""/>
+
+                    <div><h5>巨好吃的四川担担面</h5><span>人气值：234</span>步骤：5 难易度：☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/sichuan3.jpg" alt=""/>
+
+                    <div><h5>麻辣水煮鱼</h5><span>人气值：234</span>步骤：13 难易度：☆☆☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/sichuan4.jpg" alt=""/>
+
+                    <div><h5>自制四川豌豆凉粉</h5><span>人气值：234</span>步骤：8 难易度：☆☆</div>
+                </div>
+                <div class="img"><img src="img/sichuan5.jpg" alt=""/>
+
+                    <div><h5>#蜀滋蜀味#狼牙土豆</h5><span>人气值：234</span>步骤：9 难易度：☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/sichuan6.jpg" alt=""/>
+
+                    <div><h5>*四川特色*麻婆豆腐</h5><span>人气值：234</span>步骤：9 难易度：☆☆</div>
+                </div>
+                <div class="img"><img src="img/sichuan7.jpg" alt=""/>
+
+                    <div><h5>牙签肉</h5><span>人气值：234</span>步骤：9 难易度：☆☆</div>
+                </div>
+                <div class="img"><img src="img/sichuan8.jpg" alt=""/>
+
+                    <div><h5>*四川特色*豌豆尖圆子汤</h5><span>人气值：234</span>步骤：9 难易度：☆☆</div>
+                </div>
+
+            </div>
+            <div class="diqu">
+                <div class="img"><img src="img/shanxi1.jpg" alt=""/>
+
+                    <div><h5>油泼扯面</h5><span>人气值：234</span>步骤：7 难易度：☆☆</div>
+                </div>
+                <div class="img"><img src="img/shanxi2.jpg" alt=""/>
+
+                    <div><h5>腊汁肉夹馍</h5><span>人气值：234</span>步骤：9 难易度：☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/shanxi3.jpg" alt=""/>
+
+                    <div><h5>羊肉泡馍</h5><span>人气值：234</span>步骤：4 难易度：☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/shanxi4.jpg" alt=""/>
+
+                    <div><h5>陕西烩麻食</h5><span>人气值：234</span>步骤：8 难易度：☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/shanxi5.jpg" alt=""/>
+
+                    <div><h5>陕西麻食</h5><span>人气值：234</span>步骤：3 难易度：☆☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/shanxi6.jpg" alt=""/>
+
+                    <div><h5>陕西臊子肉</h5><span>人气值：234</span>步骤：6 难易度：☆☆☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/shanxi7.jpg" alt=""/>
+
+                    <div><h5>#陕西小吃#槐花麦饭</h5><span>人气值：234</span>步骤：6 难易度：☆☆☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/shanxi8.jpg" alt=""/>
+
+                    <div><h5>红薯甜食</h5><span>人气值：234</span>步骤：6 难易度：☆☆☆☆☆</div>
+                </div>
+            </div>
+            <div class="diqu">
+                <div class="img"><img src="img/guangdong1.jpg" alt=""/>
+
+                    <div><h5>美味鲜虾肠粉</h5><span>人气值：234</span>步骤：8 难易度：☆☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/guangdong2.jpg" alt=""/>
+
+                    <div><h5>在家也能轻松搞定</h5><span>人气值：234</span>步骤：5 难易度：☆</div>
+                </div>
+                <div class="img"><img src="img/guangdong3.jpg" alt=""/>
+
+                    <div><h5>水晶虾饺</h5><span>人气值：234</span>步骤：9 难易度：☆☆</div>
+                </div>
+                <div class="img"><img src="img/guangdong5.jpg" alt=""/>
+
+                    <div><h5>港式萝卜糕</h5><span>人气值：234</span>步骤：4 难易度：☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/guangdong4.jpg" alt=""/>
+
+                    <div><h5>牛肉鸡蛋肠粉#樱花味道#</h5><span>人气值：234</span>步骤：8 难易度：☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/guangdong6.jpg" alt=""/>
+
+                    <div><h5>广东云吞面</h5><span>人气值：234</span>步骤：5 难易度：☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/guangdong7.jpg" alt=""/>
+
+                    <div><h5>肉香糯米卷</h5><span>人气值：234</span>步骤：5 难易度：☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/guangdong8.jpg" alt=""/>
+
+                    <div><h5>潮汕尖米条</h5><span>人气值：234</span>步骤：5 难易度：☆☆☆</div>
+                </div>
+
+            </div>
+            <div class="diqu">
+                <div class="img"><img src="img/hunan1.jpg" alt=""/>
+
+                    <div><h5>湖南小吃#回锅鸡蛋</h5><span>人气值：234</span>步骤：5 难易度：☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/hunan2.jpg" alt=""/>
+
+                    <div><h5>湖南小吃#凉拌米豆腐</h5><span>人气值：234</span>步骤：3 难易度：☆☆</div>
+                </div>
+                <div class="img"><img src="img/hunan3.jpg" alt=""/>
+
+                    <div><h5>自制湖南牛肉米粉#</h5><span>人气值：234</span>步骤：8 难易度：☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/hunan4.jpg" alt=""/>
+
+                    <div><h5>湖南小吃#红薯粑粑#</h5><span>人气值：234</span>步骤：5 难易度：☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/hunan5.jpg" alt=""/>
+
+                    <div><h5>湖南小吃#滋补祛暑气#</h5><span>人气值：234</span>步骤：9 难易度：☆☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/hunan6.jpg" alt=""/>
+
+                    <div><h5>湖南老婆饼</h5><span>人气值：234</span>步骤：5 难易度：☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/hunan7.jpg" alt=""/>
+
+                    <div><h5>湖南小吃&芝麻排叉</h5><span>人气值：234</span>步骤：5 难易度：☆☆☆</div>
+                </div>
+                <div class="img"><img src="img/hunan8.jpg" alt=""/>
+
+                    <div><h5>花样汤丸</h5><span>人气值：234</span>步骤：5 难易度：☆☆☆</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--各地小吃  end-->
+<!--固定导航栏-->
+<div id="gdNav">
+    <ul>
+        <li class="navli">顶部<br>△</li>
+        <li class="navli">今日<br>推荐</li>
+        <li class="navli">四大<br>菜系</li>
+        <li class="navli">最新<br>美食</li>
+        <li class="navli">中秋<br>缓乏</li>
+        <li class="navli">各地<br>小吃</li>
+        <li class="navli">关注<br>我们</li>
+
+    </ul>
+</div>
+<!--脚部  start-->
+<div id="footer" class="gudingNav">
+    <!-- 版心-->
+    <div class="container">
+
+        <!-- 底部上半部分-->
+        <div class="top clearfix">
+            <!-- 底部上半部分左-->
+            <div class="logo">
+                <ul>
+                    <li><img src="img/logo2.png" width="215" height="100"/></li>
+                    <li>中国,最大的菜谱库 <span>800,000 篇</span></li>
+                    <li>每月,用户访问数量 <span>20,000,000 次</span></li>
+                    <li>每年,菜谱被浏览量 <span>36,000,000,000 次</span></li>
+                    <li>现在,这些数字还在不断增长着,欢迎您来一起使用美食杰</li>
+                </ul>
+            </div>
+            <!-- 底部上半部分右-->
+            <div class="erweima">
+
+                <ul>
+                    <!-- 官方微博-->
+                    <li>
+                        <div class="gfwb">
+                            <a href="#">关注:49万</a>
+
+                            <p></p>
+
+                            <p>点击进入</p>
+
+                            <p>美食杰官方微博</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="qqkj">
+                            <a href="#">关注:10.9万</a>
+
+                            <p></p>
+
+                            <p>点击进入</p>
+
+                            <p>美食杰qq空间</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wxhy">
+
+
+                            <p>扫瞄二维码添加</p>
+
+                            <p>美食杰为微信好友</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sjkhd">
+
+
+                            <p>扫瞄二维码下载</p>
+
+                            <p>美食杰手机客户端</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 底部下半部分-->
+        <div class=" down">
+
+            <div class="youqing">
+                友情链接
+                <hr/>
+            </div>
+            <div class="lianjie">
+                <a href="#">美食</a>
+                <a href="#">体质测试</a>
+                <a href="#">伊特</a>
+                <a href="#">大粤网美食</a>
+                <a href="#">9酷音乐网</a>
+                <a href="#">123菜谱大全</a>
+                <a href="#">爱奇艺生活</a>
+                <a href="#">365音乐网</a>
+                <a href="#">图吧</a>
+                <a href="#">汽车论坛</a>
+                <a href="#">风险监测</a>
+                <a href="#">QQ下载</a>
+                <a href="#">家具网</a>
+                <a href="#">搜狐美食</a>
+                <a href="#">美食天下</a>
+                <a href="#">特色菜网</a>
+                <a href="#">poco美食网</a>
+                <a href="#">中华美食网</a>
+                <a href="#">合肥公交网</a>
+                <a href="#">苹果园</a>
+                <a href="#">红餐微杂志</a>
+                <a href="#">北京搜房网</a>
+                <a href="#">东莞赶集网</a>
+                <a href="#">厨师网</a>
+                <a href="#">铲土官</a>
+                <a href="#">更多友情链接</a>
+            </div>
+            <hr/>
+            <div class="lianjie2">
+                <a href="#">公司简介</a>
+                <a href="#">企业文化</a>
+                <a href="#">公司动态</a>
+                <a href="#">免责声明</a>
+                <a href="#">联系我们</a>
+                <a href="#">招贤纳士</a>
+                <a href="#">商务合作</a>
+                <a href="#">网站地图</a>
+                <a href="#">友情链接</a>
+                <a href="#">美食杰移动APP</a>
+            </div>
+            <div class="bianhao">京ICP证150335号/京公网安备11010802009977 Copyright © 2003-2017 MEISHIJ CO.,LTD.</div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script src="js/commen.js"></script>
+<script src="js/shouyejrtj.js"></script>
+</body>
+</html>

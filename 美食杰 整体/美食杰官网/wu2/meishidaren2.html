@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>美食杰</title>
+    <!--初始化样式  -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- 头部和底部公共的样式 -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- 美食达人页样式-->
+    <link rel="stylesheet" href="css/meishidaren.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+
+            //优质内容模块，文字背景色的设置
+            var colors=["#ff7c7c","#ff4233","#ffc533","#77bf2e","#39c45d","#33ddaf",
+                "#33d9fd","#3357b5","#6933ab","#b933be","#fa74dd"];
+            for (var i = 0; i <colors.length; i++) {
+                $(".yznr .wenzi").eq(i).css({
+                    backgroundColor:colors[i],
+                });
+            }
+
+            for (var i = 0; i < colors.length; i++) {
+                $(".yznr .item").mouseenter(function () {
+                    i = $(this).index();
+                    $(this).css({
+
+                        backgroundColor: colors[i],
+
+                    })
+                            .children("div").css("backgroundColor","#fff")
+                            .children("span").css("color",colors[i])
+                })
+
+
+                $(".yznr .item").mouseleave(function(){
+                    $(this).css("backgroundColor","").children("div").css({backgroundColor:colors[i]})
+                            .children("span").css("color","white")
+                })
+
+            }
+
+
+
+
+//            for (var i = 0; i <colors.length; i++) {
+//                var index;
+//                $(".yznr .item").mouseenter(function(){
+//                    index=$(this).index();
+//                    $(this).css({
+//                       backgroundColor:colors[index],
+//                    })
+//                })
+//            }
+            //内容精选模块鼠标移入移出事件
+            $(".nrjx .fl").on({
+                mouseenter: function () {
+                    $(this).css("boxShadow", "10px 10px 10px #ccc,-10px -1px 10px #ccc");
+                },
+                mouseleave:function(){
+                    $(this).css("boxShadow", "");
+                }
+            })
+
+            //大咖专栏和热门活动模块鼠标点击切换效果
+
+                var $links=$(".dkzl .bottom a");
+                var $img=$(".dkzl .top img");
+                $links.click(function(){
+                    var href= $(this).prop("href");
+                    $img.prop("src",href);
+                    return false;
+                })
+
+
+                var $links1=$(".rmhd .bottom a");
+                var $img1=$(".rmhd .top img");
+                $links1.click(function(){
+                    var href= $(this).prop("href");
+                    $img1.prop("src",href);
+                    return false;
+                })
+
+
+
+
+
+            // 底部轮播图
+            var screen=document.getElementById("screen");
+            var timer;
+            timer=setInterval(function(){
+                var leader=screen.offsetLeft;
+                var step=-10;
+                leader+=step;
+
+                if(leader>=-(screen.offsetWidth-screen.children[0].offsetWidth*10)){
+                    screen.style.left=leader+"px";
+                }else {
+                    screen.style.left=step+"px";
+                }
+            },100)
+            //鼠标移入效果
+            screen.onmouseover=function(){
+                clearInterval(timer);
+            }
+            //鼠标移出效果
+            screen.onmouseout=function(){
+                timer=setInterval(function(){
+                    var leader=screen.offsetLeft;
+                    var step=-10;
+                    leader+=step;
+
+                    if(leader>=-(screen.offsetWidth-screen.children[0].offsetWidth*10)){
+                        screen.style.left=leader+"px";
+                    }else {
+                        screen.style.left=step+"px";
+                    }
+                },100)
+            }
+        })
+
+    </script>
+
+
+</head>
+<body>
+<!--   头部 start     -->
+<div id="head">
+
+    <!-- 版心-->
+    <div class="container">
+        <!-- logo-->
+        <div class=" f logo">
+            <a href="index.html">
+                <img src="img/logo.png" width="150" height="150">
+            </a>
+        </div>
+
+        <!-- 搜索框-->
+        <div class=" f search">
+            <input placeholder="请输入菜名/食材/菜单/作者" type="text">
+            <input type="button" value="搜索">
+        </div>
+        <!-- 登录注册导航栏-->
+        <div class=" f login">
+            <ul>
+                <li><a href="#">注册</a></li>
+                <li><a href="#">登录</a></li>
+                <li><span class="weibo"></span><a href="#">微博登录</a></li>
+                <li><span class="qq"></span><a href="#">qq登录</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--  头部 end   -->
+
+<!--  导航栏 start    -->
+
+<div id="nav">
+    <!-- 版心-->
+    <div class="container  clearfix">
+        <!--导航部分 -->
+        <div class="daohang">
+            <ul>
+                <li><a href="../index.html">首页</a></li>
+                <li class="one"><a href="../wu2/meishidaren2.html">美食达人</a></li>
+                <li class="two"><a href="../wu/html/派系test1.html">中外食界</a></li>
+                <li><a href="../mspic/index.html">美食图集</a></li>
+                <li><a href="../picWall/index.html">论坛天地</a></li>
+                <li><a href="#">饮食健康</a></li>
+                <li><a href="#">家居馆</a></li>
+                <li><a href="../puzzleGame/index.html">不要动我</a></li>
+            </ul>
+        </div>
+
+        <div class="cxmw">
+            <img src="img/changxiangmeiwei.jpg" width="300" height="100"/></a>
+        </div>
+    </div>
+</div>
+
+<!--导航栏 end-->
+
+
+<!---主体部分start--->
+<div id="main">
+    <!--大轮播图 start-->
+    <div id="daLunBo">
+
+        <div id="lunBo">
+            <!--轮播图中的图片-->
+            <ul>
+                <li><a href="#"><img src="img/daLunBo-1.jpg" alt=""/></a></li>
+                <li><a href="#"><img src="img/daLunBo-2.jpg" alt=""/></a></li>
+                <li><a href="#"><img src="img/daLunBo-3.jpeg" alt=""/></a></li>
+            </ul>
+            <!--轮播图上小圆-->
+            <ol></ol>
+        </div>
+        <!--左右箭头的小盒子-->
+        <div id="arr">
+            <span id="left">&lt;</span>
+            <span id="right">&gt;</span>
+        </div>
+
+    </div>
+
+    <!--大轮播图 end-->
+    <!-- 版心-->
+    <div class="container">
+        <!-- 优质内容模块  start-->
+        <div class="yznr">
+            <ul>
+                <li class="item item1">
+                    <img src="img/item1.jpg" alt=""/>
+                    <div class="wenzi"><span>中式菜</span></div>
+                </li>
+                <li class="item item2">
+                    <img src="img/item2.jpg" alt=""/>
+                    <div class="wenzi"><span>西式菜</span></div>
+                </li>
+                <li class="item item3">
+                    <img src="img/item3.jpg" alt=""/>
+                    <div class="wenzi"><span>烘焙</span></div>
+                </li>
+                <li class="item item4">
+                    <img src="img/item4.jpg" alt=""/>
+                    <div class="wenzi"><span>素食</span></div>
+                </li>
+                <li class="item item5">
+                    <img src="img/item5.jpg" alt=""/>
+                    <div class="wenzi"><span>轻食</span></div>
+                </li>
+                <li class="item item6">
+                    <img src="img/item6.jpg" alt=""/>
+                    <div class="wenzi"><span>一人食</span></div>
+                </li>
+                <li class="item item7">
+                    <img src="img/item7.jpg" alt=""/>
+                    <div class="wenzi"><span>孕婴</span></div>
+                </li>
+                <li class="item item8">
+                    <img src="img/item8.jpg" alt=""/>
+                    <div class="wenzi"><span>养生</span></div>
+                </li>
+                <li class="item item9">
+                    <img src="img/item9.jpg" alt=""/>
+                    <div class="wenzi"><span>技巧</span></div>
+                </li>
+                <li class="item item10">
+                    <img src="img/item10.jpg" alt=""/>
+                    <div class="wenzi"><span>品位家</span></div>
+                </li>
+                <li class="item item11">
+                    <img src="img/item11.jpg" alt=""/>
+                    <div class="wenzi"><span>营养师</span></div>
+                </li>
+            </ul>
+        </div>
+        <!-- 优质内容模块  end-->
+
+
+        <!-- 内容精选模块start-->
+        <div class="nrjx">
+            <!-- 标题-->
+            <h2>内容精选</h2>
+            <!-- 内容部分-->
+            <div class="content clearfix">
+                <ul>
+                    <li class="fl">
+                        <!-- 图片-->
+                        <a href="#"><img src="img/nrjx1.jpg"></a>
+                        <!-- 文字-->
+                        <div class="txt">
+                            <p>月饼里加它，竟然是补钙佳品...</p>
+                            <div ><a href="#">2055浏览.7评论.1385赞</a></div>
+                            <span><a href="#">美美家的厨房</a></span>
+                        </div>
+                    </li>
+                    <li class="fl">
+                        <!-- 图片-->
+                        <a href="#"><img src="img/nrjx2.jpg"></a>
+                        <!-- 文字-->
+                        <div class="txt">
+                            <p>月饼里加它，竟然是补钙佳品...</p>
+                            <div ><a href="#">2055浏览.7评论.1385赞</a></div>
+                            <span><a href="#">美美家的厨房</a></span>
+                        </div>
+                    </li>
+                    <li class="fl">
+                        <!-- 图片-->
+                        <a href="#"><img src="img/nrjx3.jpg"></a>
+                        <!-- 文字-->
+                        <div class="txt">
+                            <p>月饼里加它，竟然是补钙佳品...</p>
+                            <div ><a href="#">2055浏览.7评论.1385赞</a></div>
+                            <span><a href="#">美美家的厨房</a></span>
+                        </div>
+                    </li>
+                    <li class="fl">
+                        <!-- 图片-->
+                        <a href="#"><img src="img/nrjx4.jpg"></a>
+                        <!-- 文字-->
+                        <div class="txt">
+                            <p>月饼里加它，竟然是补钙佳品...</p>
+                            <div><a href="#">2055浏览.7评论.1385赞</a></div>
+                            <span><a href="#">美美家的厨房</a></span>
+                        </div>
+                    </li>
+                    <li class="fl">
+                        <!-- 图片-->
+                        <a href="#"><img src="img/nrjx5.jpg"></a>
+                        <!-- 文字-->
+                        <div class="txt">
+                            <p>月饼里加它，竟然是补钙佳品...</p>
+                            <div><a href="#">2055浏览.7评论.1385赞</a></div>
+                            <span><a href="#">美美家的厨房</a></span>
+                        </div>
+                    </li>
+                    <li class="fl">
+                        <!-- 图片-->
+                        <a href="#"><img src="img/nrjx6.jpg"></a>
+                        <!-- 文字-->
+                        <div class="txt">
+                            <p>月饼里加它，竟然是补钙佳品...</p>
+                            <div>2055浏览.7评论.1385赞</div>
+                            <span><a href="#">美美家的厨房</a></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 内容精选模块end-->
+
+        <!-- 大咖专栏和热门活动模块 start-->
+        <ul class="clearfix">
+            <!-- 大咖专栏-->
+            <li class="dkzl fl">
+                <!-- 标题-->
+                <h2>大咖专栏</h2>
+                <!-- 内容-->
+                <div class="content">
+                    <!-- 上-->
+                    <div class="top">
+                        <a href="#"><img src="img/dkzl-t1.jpg"/></a>
+                    </div>
+                    <!-- 下-->
+                    <div class="bottom">
+                        <a href="img/dkzl-t1.jpg" class="fl"><img src="img/dkzl-b1.jpg" /></a>
+                        <a href="img/dkzl-t2.jpg" class="fl"><img src="img/dkzl-b2.jpg" /></a>
+                        <a href="img/dkzl-t3.jpg" class="fl"><img src="img/dkzl-b3.jpg" /></a>
+                    </div>
+                </div>
+            </li>
+            <!-- 热门活动-->
+            <li class="rmhd fl">
+                <!-- 标题-->
+                <h2>热门活动</h2>
+                <!-- 内容-->
+                <div class="content">
+                    <!-- 上-->
+                    <div class="top">
+                        <a href="#"><img src="img/rmhd-t3.jpg" /></a>
+                    </div>
+                    <!-- 下-->
+                    <div class="bottom">
+                        <a href="img/rmhd-t1.jpg" class="fl"><img src="img/rmhd-b1.jpg" /></a>
+                        <a href="img/rmhd-t2.jpg" class="fl"><img src="img/rmhd-b2.jpg" /></a>
+                        <a href="img/rmhd-t3.jpg" class="fl"><img src="img/rmhd-b3.jpg" /></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!-- 大咖专栏和热门活动模块 end-->
+
+
+        <!--达人榜单 start-->
+
+        <div class="container clearfix">
+            <div class="biaoTi">
+                <div>达人榜单</div>
+            </div>
+
+            <div id="daRen">
+                <!--新晋达人-->
+                <div class="xinJin">
+                    <div class="xJ1">
+                        <h4>新晋达人</h4>
+                    </div>
+                    <ul class="xJ2">
+                        <li>
+                            <div class="tx">
+
+                            </div>
+                            <p><a href="#">瑶瑶20082008</a></p>
+                            <p>喜欢吃美食、乐意分享美食、更热...</p>
+                        </li>
+                        <li>
+                            <div class="tx">
+
+                            </div>
+                            <p><a href="#">soshaw</a></p>
+                            <p>爱美食，爱分享，进一步提升...</p>
+                        </li>
+                        <li>
+                            <div class="tx">
+
+                            </div>
+                            <p><a href="#">爱烘焙浩妈</a></p>
+                            <p>想把自己会做的美食与更多...</p>
+                        </li>
+                        <li>
+                            <div class="tx">
+
+                            </div>
+                            <p><a href="#">A、梦里梦见</a></p>
+                            <p>热爱烘焙！！也喜欢将自己...</p>
+                        </li>
+                        <li>
+                            <div class="tx">
+
+                            </div>
+                            <p><a href="#">川宝的厨房</a></p>
+                            <p>热爱美食，乐于分享。做菜...</p>
+                        </li>
+                        <li>
+                            <div class="tx">
+
+                            </div>
+                            <p><a href="#">纪元杰米35119123</a></p>
+                            <p>想让美食变成美事，在美食...</p>
+                        </li>
+                    </ul>
+
+                </div>
+                <!--热门达人-->
+                <div class="hot">
+                    <div class="h1">
+                        <h4>热门达人</h4>
+                    </div>
+                    <ul class="h2">
+                        <li>
+                            <div class="tx1"></div>
+                            <p><a href="#">小玉厨房</a></p>
+                            <p>本月热度：3321</p>
+                            <span><a href="#">关注</a></span>
+                        </li>
+                        <li>
+                            <div class="tx1">
+
+                            </div>
+                            <p><a href="#">寓言7656</a></p>
+                            <p>本月热度：1752</p>
+                            <span><a href="#">关注</a></span>
+                        </li>
+                        <li>
+                            <div class="tx1">
+
+                            </div>
+                            <p><a href="#">美食小编</a></p>
+                            <p>本月热度：1669</p>
+                            <span><a href="#">关注</a></span>
+                        </li>
+                        <li>
+                            <div class="tx1">
+
+                            </div>
+                            <p><a href="#">开心果子365Q</a></p>
+                            <p>本月热度：1598</p>
+                            <span><a href="#">关注</a></span>
+                        </li>
+                        <li>
+                            <div class="tx1">
+
+                            </div>
+                            <p><a href="#">老方小雨</a></p>
+                            <p>本月热度：1402</p>
+                            <span><a href="#">关注</a></span>
+                        </li>
+                        <li>
+                            <div class="tx1">
+
+                            </div>
+                            <p><a href="#">杰米田园</a></p>
+                            <p>本月热度：1262</p>
+                            <span><a href="#">关注</a></span>
+                        </li>
+                    </ul>
+                </div>
+                <!--达人计划-->
+                <div class="plan">
+                    <p>成为达人即可享受不一样的特权专属标识、优先推荐、更高的积分体系、更多的家居馆折扣…想要施展才华、展现魅力的你，快来申请成为美食达人吧~</p>
+                    <a href="#">申请达人</a>
+                </div>
+
+
+            </div>
+            <!--达人榜单 end-->
+
+            <!--达人任务 start-->
+            <div class="biaoTi">
+                <div>达人任务</div>
+            </div>
+            <div id="fHZ">
+                <div id="renWu">
+                    <div class="detail">
+                        <img src="img/rw-1.png" alt=""/>
+                        <p class="top">
+                            <span class="zs">中式菜</span>
+                            <a href="#">霸王超市 | 新鲜秋刀鱼</a>
+                        </p>
+                        <p class="bottom">
+                            <span class="yiJi">一级任务</span>
+                            | 浏览：159 | 申请名额：99 | 申请人数：33 | 截止时间：09月17日 12:00
+                        </p>
+                        <a href="#" class="LQ overTime">已过期</a>
+                        <span class="jL">奖励：秋刀鱼+菜谱积分</span>
+                    </div>
+                    <div class="detail">
+                        <img src="img/rw-2.jpg" alt=""/>
+                        <p class="top">
+                            <span class="zs">中式菜</span>
+                            <a href="#">花式早餐饼 | 哪款是你的爱</a>
+                        </p>
+                        <p class="bottom">
+                            <span class="yiJi">一级任务</span>
+                            | 浏览：154 | 申请名额：99 | 申请人数：33 | 截止时间：09月28日 23:59
+                        </p>
+                        <a href="#" class="LQ">领取任务</a>
+                        <span class="jL">奖励：500积分</span>
+                    </div>
+                    <div class="detail">
+                        <img src="img/rw-3.png" alt=""/>
+                        <p class="top">
+                            <span class="zs">中式菜</span>
+                            <a href="#">霸王超市 | 美味酱料</a>
+                        </p>
+                        <p class="bottom">
+                            <span class="yiJi">一级任务</span>
+                            | 浏览：299 | 申请名额：99 | 申请人数：33 | 截止时间：09月4日 11:00
+                        </p>
+                        <a href="#" class="LQ overTime">已过期</a>
+                        <span class="jL">奖励：黑椒汁、叉烧酱+菜谱积分</span>
+                    </div>
+                    <div class="detail">
+                        <img src="img/rw-4.jpg" alt=""/>
+                        <p class="top">
+                            <span class="zs">中式菜</span>
+                            <a href="#">香肠的诱惑 | 你抗拒得了么？</a>
+                        </p>
+                        <p class="bottom">
+                            <span class="yiJi">一级任务</span>
+                            | 浏览：173 | 申请名额：99 | 申请人数：28 | 截止时间：09月26日 23:59
+                        </p>
+                        <a href="#" class="LQ">领取任务</a>
+                        <span class="jL">奖励：500积分</span>
+                    </div>
+                    <div class="detail">
+                        <img src="img/rw-5.png" alt=""/>
+                        <p class="top">
+                            <span class="zs">中式菜</span>
+                            <a href="#">霸王超市 | 蔬菜皇后-洋葱</a>
+                        </p>
+                        <p class="bottom">
+                            <span class="yiJi">一级任务</span>
+                            | 浏览：188 | 申请名额：99 | 申请人数：24 | 截止时间：09月12日 14:00
+                        </p>
+                        <a href="#" class="LQ overTime">已过期</a>
+                        <span class="jL">奖励：洋葱+菜谱积分</span>
+                    </div>
+                    <div class="detail">
+                        <img src="img/rw-6.jpg" alt=""/>
+                        <p class="top">
+                            <span class="zs">中式菜</span>
+                            <a href="#">加油妙招之食材清洗</a>
+                        </p>
+                        <p class="bottom">
+                            <span class="yiJi">一级任务</span>
+                            | 浏览：151 | 申请名额：99 | 申请人数：41 | 截止时间：09月25日 23:59
+                        </p>
+                        <a href="#" class="LQ">领取任务</a>
+                        <span class="jL">奖励：500积分</span>
+                    </div>
+
+                </div>
+                <div id="over">
+                    <a href="#">查看更多任务 > > </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!--达人榜单 end-->
+
+        <!-- 底部轮播图模块 start-->
+        <div class="lbt">
+            <div id="screen">
+                <dl>
+                    <dt><img src="img/lbt1.jpg" alt=""/></dt>
+                    <dd>降血糖的零食</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/lbt2.jpg" alt=""/></dt>
+                    <dd>降血糖的零食</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/lbt3.jpg" alt=""/></dt>
+                    <dd>降血糖的零食</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/lbt4.jpg" alt=""/></dt>
+                    <dd>降血糖的零食</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/lbt5.jpg" alt=""/></dt>
+                    <dd>降血糖的零食</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/lbt6.jpg" alt=""/></dt>
+                    <dd>降血糖的零食</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/lbt7.jpg" alt=""/></dt>
+                    <dd>降血糖的零食</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/lbt8.jpg" alt=""/></dt>
+                    <dd>降血糖的零食</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/lbt9.jpg" alt=""/></dt>
+                    <dd>降血糖的零食</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/lbt1.jpg" alt=""/></dt>
+                    <dd>降血糖的零食</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/lbt2.jpg" alt=""/></dt>
+                    <dd>降血糖的零食</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/lbt3.jpg" alt=""/></dt>
+                    <dd>降血糖的零食</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/lbt4.jpg" alt=""/></dt>
+                    <dd>降血糖的零食</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/lbt5.jpg" alt=""/></dt>
+                    <dd>降血糖的零食</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/lbt6.jpg" alt=""/></dt>
+                    <dd>降血糖的零食</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/lbt7.jpg" alt=""/></dt>
+                    <dd>降血糖的零食</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/lbt8.jpg" alt=""/></dt>
+                    <dd>降血糖的零食</dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/lbt9.jpg" alt=""/></dt>
+                    <dd>降血糖的零食</dd>
+                </dl>
+            </div>
+        </div>
+        <!-- 底部轮播图模块  end-->
+    </div>
+</div>
+
+
+<!--小搜索框 start-->
+<div id="search">
+    <span id="dianji">点击显示</span>
+    <input id="ipt" type="text" placeholder="&nbsp;&nbsp;&nbsp;输入菜谱、食材、作者" />
+    <button>搜索</button>
+</div>
+<!--小搜索框 end-->
+
+<!---主体部分end--->
+
+
+<!--脚部  start-->
+
+<div id="footer">
+    <!-- 版心-->
+    <div class="container">
+
+        <!-- 底部上半部分-->
+        <div class="top clearfix">
+            <!-- 底部上半部分左-->
+            <div class="logo">
+                <ul>
+                    <li><img src="img/logo2.png" width="215" height="100"/></li>
+                    <li>中国,最大的菜谱库 <span>800,000 篇</span></li>
+                    <li>每月,用户访问数量 <span>20,000,000 次</span></li>
+                    <li>每年,菜谱被浏览量 <span>36,000,000,000 次</span></li>
+                    <li>现在,这些数字还在不断增长着,欢迎您来一起使用美食杰</li>
+                </ul>
+            </div>
+            <!-- 底部上半部分右-->
+            <div class="erweima">
+
+                <ul>
+                    <!-- 官方微博-->
+                    <li>
+                        <div class="gfwb">
+                            <a href="#">关注:49万</a>
+
+                            <p></p>
+
+                            <p>点击进入</p>
+
+                            <p>美食杰官方微博</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="qqkj">
+                            <a href="#">关注:10.9万</a>
+
+                            <p></p>
+
+                            <p>点击进入</p>
+
+                            <p>美食杰qq空间</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wxhy">
+
+
+                            <p>扫瞄二维码添加</p>
+
+                            <p>美食杰为微信好友</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sjkhd">
+
+
+                            <p>扫瞄二维码下载</p>
+
+                            <p>美食杰手机客户端</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 底部下半部分-->
+        <div class=" down">
+
+            <div class="youqing">
+                友情链接
+                <hr/>
+            </div>
+            <div class="lianjie">
+                <a href="#">美食</a>
+                <a href="#">体质测试</a>
+                <a href="#">伊特</a>
+                <a href="#">大粤网美食</a>
+                <a href="#">9酷音乐网</a>
+                <a href="#">123菜谱大全</a>
+                <a href="#">爱奇艺生活</a>
+                <a href="#">365音乐网</a>
+                <a href="#">图吧</a>
+                <a href="#">汽车论坛</a>
+                <a href="#">风险监测</a>
+                <a href="#">QQ下载</a>
+                <a href="#">家具网</a>
+                <a href="#">搜狐美食</a>
+                <a href="#">美食天下</a>
+                <a href="#">特色菜网</a>
+                <a href="#">poco美食网</a>
+                <a href="#">中华美食网</a>
+                <a href="#">合肥公交网</a>
+                <a href="#">苹果园</a>
+                <a href="#">红餐微杂志</a>
+                <a href="#">北京搜房网</a>
+                <a href="#">东莞赶集网</a>
+                <a href="#">厨师网</a>
+                <a href="#">铲土官</a>
+                <a href="#">更多友情链接</a>
+            </div>
+            <hr/>
+            <div class="lianjie2">
+                <a href="#">公司简介</a>
+                <a href="#">企业文化</a>
+                <a href="#">公司动态</a>
+                <a href="#">免责声明</a>
+                <a href="#">联系我们</a>
+                <a href="#">招贤纳士</a>
+                <a href="#">商务合作</a>
+                <a href="#">网站地图</a>
+                <a href="#">友情链接</a>
+                <a href="#">美食杰移动APP</a>
+            </div>
+            <div class="bianhao">京ICP证150335号/京公网安备11010802009977 Copyright © 2003-2017 MEISHIJ CO.,LTD.</div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    //大轮播图的js样式 start
+
+    //1、获取元素
+    var daLunBo=document.getElementById("daLunBo")
+    var lunBo=document.getElementById("lunBo");//可视区域
+    var imgWid=lunBo.offsetWidth;//图片宽度
+    var ul=lunBo.children[0]//要滚动的ul
+    var lisUl=ul.children//所有的图片li
+    var ol=lunBo.children[1]//放置小圆点的位置
+    var lisOl=ol.children//所有的小圆点（默认没有内容，添加后会自动增加）
+    var arrBox=document.getElementById("arr")//左右箭头的父盒子
+    var left=arrBox.children[0]//左箭头
+    var right=arrBox.children[1]//右箭头
+    var count;
+
+    //    2、动态创建小圆点
+    var li;
+    for (var i = 0; i < lisUl.length; i++) {
+        li=document.createElement("li");
+        ol.appendChild(li);
+    }
+    //    2.1给第一个小圆点设置颜色
+    lisOl[0].className="current";
+
+    //    3、简单轮播图
+    for (var i = 0; i < lisOl.length; i++) {
+        lisOl[i].index=i;
+        lisOl[i].onclick=function(){
+
+            //点击设置按钮变色
+            for (var i = 0; i < lisOl.length; i++) {
+                lisOl[i].className="";
+            }
+            lisOl[this.index].className="current";
+//         将当前索引值暂存在一个变量中
+
+            //根据索引值判断运动的位置
+            animate(ul,-this.index*imgWid);
+            count=this.index;
+        }
+
+    };
+
+    //4、左右焦点图
+    //   添加一个假的第一张在最后一张后面
+    count=0;
+    ul.appendChild(ul.children[0].cloneNode(true));
+
+    //给右箭头设置点击事件
+    right.onclick=fun;
+    //给左箭头设置点击事件
+    left.onclick=function(){
+//       当第一张，那么就抽回到假的第一张
+        if(count==0){
+            ul.style.left=-(lisOl.length)*imgWid+"px";
+            count=lisOl.length;
+        }
+        count--;
+        animate(ul,-count*imgWid);
+
+        for (var i = 0; i < lisOl.length; i++) {
+            lisOl[i].className = "";
+        }
+        lisOl[count].className = "current";
+    }
+
+
+    //5、自动播放
+    var timer=null;
+    timer=setInterval(function(){
+        right.click();
+    },2000)
+    //   左右箭头设置移入移出事件
+
+    daLunBo.onmouseover=function(){
+        arrBox.style.display="block";
+        clearInterval(timer);
+
+    };
+    daLunBo.onmouseout=function(){
+        arrBox.style.display="none"
+        timer = setInterval(function(){
+            right.click();
+        },2000)
+    }
+
+
+    function fun(){
+        //当显示了假的第一张，需要进行抽回操作
+        if(count==lisOl.length){
+            ul.style.left=0+"px";
+            count=0;
+        }
+        count++;
+        animate(ul,-count*imgWid);
+
+        for (var i = 0; i < lisOl.length; i++) {
+            lisOl[i].className = "";
+        }
+
+        if(count==lisOl.length){
+            lisOl[0].className="current";
+        }else{
+            //当显示假的第一张，让第一个小圆点变色
+            lisOl[count].className = "current";
+        }
+    };
+
+    function animate(element, target) {
+        clearInterval(element.timer);
+        element.timer = setInterval(function () {
+            //1 获取元素当前位置
+            var current = element.offsetLeft;
+            //2 设置变速运动公式
+            var step = (target - current) / 10;
+            //对步长进行取整操作,正数向上取整，负数向下取整
+            step = step > 0 ? Math.ceil(step) : Math.floor(step);
+
+            current = current + step;
+            //3 设置给left属性
+            element.style.left = current + "px";
+            //4 到达指定位置清除定时器即可
+            if (current == target) {
+                clearInterval(element.timer);
+            }
+        }, 20);
+    };
+
+    //大轮播图 end
+
+
+    //达人榜单背景图
+    var xjTx=document.getElementsByClassName("tx");
+
+    for (var i = 0; i < xjTx.length; i++) {
+        xjTx[i].style.backgroundImage="url(img/xj-"+(i+1)+".jpg)";
+    };
+
+    var hotTx=document.getElementsByClassName("tx1");
+    for (var  i= 0;  i< hotTx.length; i++) {
+        hotTx[i].style.backgroundImage="url(img/rm-"+(i+1)+".jpg)";
+    }
+
+
+
+
+    //    达人任务滚动 start
+    //    设置定时器让它循环滚动
+    var timer2 = setInterval(function(){
+        yunDong();
+    }, 2000);
+    //当鼠标移入清除定时器
+    $("#renWu").mouseenter(function(){
+        clearInterval(timer2);
+    })
+    //当鼠标移出在重新开启定时器
+    $("#renWu").mouseleave(function(){
+        timer2=setInterval(function(){
+            yunDong();
+        },2000)
+
+    })
+    //    运动的代码
+    function yunDong(){
+        $("#renWu").animate({
+            top:-$(".detail").height()
+        },1000,function() {
+            $("#renWu div:first-child").detach().appendTo($("#renWu"));
+            $("#renWu").css("top", 0);
+        })
+    }
+    //    达人任务滚动 end
+
+    //    搜索框样式
+    $("#search").mouseenter(function(){
+        $("#search").stop().animate({bottom:0},2000)
+    });
+    $("#search").mouseleave(function(){
+        $("#search").stop().animate({bottom:-59},5000)
+    });
+    $("#dianji").css("cursor","pointer").click(function(){
+        $(this).text("点击收缩").click(function(){
+            $("#search").css({bottom:-59})
+        })
+    })
+
+</script>
+</body>
+</html>

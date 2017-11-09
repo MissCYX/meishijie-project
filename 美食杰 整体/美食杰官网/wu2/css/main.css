@@ -1,0 +1,440 @@
+#daLunBo{
+    width:100%;
+    height:344px;
+    margin: 40px 0;
+    position: relative;
+}
+
+/*轮播图可视区域*/
+
+#daLunBo #lunBo{
+    width: 1030px;
+    height:344px;
+    margin:0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#daLunBo #lunBo ul{
+    width:4120px;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+
+/*轮播图中所有图片的li*/
+
+#lunBo ul li{
+    float: left;
+    overflow: hidden;
+}
+
+/*左右箭头*/
+
+#daLunBo #left,#right{
+    width:120px;
+    height:120px;
+    font-size: 70px;
+    position: absolute;
+    display: inline-block;
+    line-height: 120px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/*左右箭头的位置定位*/
+
+#daLunBo #left{
+    left:40px;
+    top:112px;
+}
+#daLunBo #right{
+    right:40px;
+    top:112px;
+}
+
+/*导航中的小圆点*/
+
+#lunBo ol{
+    position: absolute;
+    left:50%;
+    margin-left: -50px;
+    top:324px;
+}
+
+
+#lunBo ol li{
+    float:left;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:rgba(0,0,0,0.5);
+    cursor: pointer;
+
+}
+#lunBo ol li+li{
+    margin-left:10px;
+}
+
+#lunBo ol li.current{
+    background-color: red;
+}
+/*左右箭头的父盒子的样式*/
+#arr{
+    display: none;
+}
+
+/*达人榜单部分样式*/
+.container .biaoTi{
+    height:84px;
+    margin-top: 35px;
+    /*width:1030px;*/
+}
+.container .biaoTi div{
+    font-size: 24px;
+    color:#fff;
+    line-height: 84px;
+    text-align: center;
+}
+/*新晋达人部分样式*/
+
+.container #daRen{
+    width:1058px;
+    height: 482px;
+    margin:0 auto;
+}
+.container #daRen .xinJin,.hot,.plan{
+    float:left;
+}
+.container #daRen .hot,.plan{
+    margin-left: 10px;
+}
+.container #daRen .xinJin .xJ1{
+    width:346px;
+    height:60px;
+    background: white;
+    border-bottom: 2px solid #F5F5F5;
+}
+.container #daRen .xinJin h4{
+    color:#000000;
+    font-size: 16px;
+    border-bottom: 1px;
+    line-height: 60px;
+    margin-left: 20px;
+}
+.container #daRen .xinJin .xJ2{
+    width:346px;
+    height:420px;
+    background: white;
+    /*margin-top:2px;*/
+}
+.container #daRen .xinJin .xJ2 li{
+    height:50px;
+    margin-left: 20px;
+    padding-top: 15px;
+}
+.container #daRen .xinJin .xJ2 li .tx{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: center bottom;
+    background-size: 50px 50px;
+    display: inline-block;
+    float:left;
+}
+.container #daRen .xinJin .xJ2 li p{
+    margin-left: 10px;
+    float:left;
+    font-size: 14px;
+    color:#666666;
+}
+.container #daRen .xinJin .xJ2 li p>a{
+    color:#000000;
+    font-size: 16px;
+    width: 168px;
+    display: inline-block;
+}
+.container #daRen .xinJin .xJ2 li p>a:hover{
+    color: red;
+    text-decoration:underline;
+}
+/*热门达人样式*/
+.container #daRen .hot .h1{
+    width:346px;
+    height:60px;
+    background: white;
+    border-bottom: 2px solid #F5F5F5;
+}
+.container #daRen .hot h4{
+    color:#000000;
+    font-size: 16px;
+    border-bottom: 1px;
+    line-height: 60px;
+    margin-left: 20px;
+}
+.container #daRen .hot .h2{
+    width:346px;
+    height:420px;
+    background: white;
+    /*margin-top:2px;*/
+}
+
+.container #daRen .hot .h2 li{
+    height:50px;
+    margin-left: 20px;
+    padding-top: 15px;
+    position: relative;
+}
+.container #daRen .hot .h2 li .tx1{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    background: url("../img/tx2.jpg") center bottom;
+    background-size: 50px 50px;
+    display: inline-block;
+    float:left;
+}
+
+.container #daRen .hot .h2 li p{
+    margin-left: 10px;
+    float:left;
+    width: 180px;
+    font-size: 14px;
+    color:#666666;
+}
+
+.container #daRen .hot .h2 li p>a{
+    color:#000000;
+    font-size: 16px;
+}
+.container #daRen .hot .h2 li p>a:hover{
+    color: red;
+    text-decoration:underline;
+}
+.container #daRen .hot .h2 li span{
+    display: inline-block;
+    height:25px;
+    width: 40px;
+    border-radius: 5px;
+    background-color: #FF4C35;
+    text-align: center;
+    line-height: 25px;
+    position: absolute;
+    right:20px;
+    top:28px;
+
+}
+.container #daRen .hot .h2 li span a{
+    color:white;
+
+}
+/*达人计划样式*/
+.container #daRen .plan{
+    width: 346px;
+    height:482px;
+    background:white url("../img/plan-bg.png") no-repeat center 48px;
+}
+.container #daRen .plan p{
+    margin-top: 150px;
+    line-height: 20px;
+    margin-left: 40px;
+    margin-right: 50px;
+    color:#666666;
+    font-size: 14px;
+}
+.container #daRen .plan a{
+    width: 160px;
+    height: 50px;
+    display:block;
+    background:#FF4C35;
+    margin:360px auto 0;
+    text-align: center;
+    line-height: 50px;
+    color:white;
+    font-size: 18px;
+}
+.container #daRen .plan a:hover{
+    background-color: red;
+}
+
+/*任务达人样式*/
+
+/*大盒子整体样式*/
+
+.container #fHZ{
+    margin: 0 auto;
+    width: 1038px;
+    height:776px;
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+}
+.container #renWu{
+    overflow: hidden;
+    width: 1038px;
+    height:716px;
+    position: absolute;
+    background-color: white;
+
+
+}
+.container #renWu .detail{
+    border-bottom: 2px dashed #EEEEEE;
+    height:117px;
+    width: 1038px;
+    float:left;
+    position: relative;
+}
+.container #renWu .detail:hover{
+    background:rgba(240,240,240,0.3);
+}
+.container #renWu .detail img{
+    width: 124px;
+    height: 70px;
+    margin:25px 13px 25px 24px ;
+}
+.container #renWu .detail .zs{
+    width: 52px;
+    height: 25px;
+    display: inline-block;
+    background-color: #FF4C35;
+    color:white;
+    text-align: center;
+    line-height: 25px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.container #renWu .detail .top a{
+    display: inline-block;
+    color:#000000;
+    font-size: 20px;
+    margin-right: 180px;
+}
+.container #renWu .detail .top a:hover{
+    color:red;
+    text-decoration: underline;
+}
+.container #renWu .detail img,p{
+    float:left
+}
+.container #renWu .detail .top{
+    margin-top: 32px;
+}
+.container #renWu .detail .bottom{
+    margin-top: 11px;
+    font-size: 14px;
+}
+.container #renWu .detail .bottom .yiJi{
+    color: #000000;
+    font-weight: bold;
+
+}
+/*奖励部分*/
+/*.container #renWu .detail .jL{*/
+     /*float:right;*/
+ /*}*/
+.container #renWu .detail .jL{
+    position: absolute;
+    right: 134px;
+    top:50%;
+    margin-top: -12px;
+    height:24px;
+    padding-left: 24px;
+    background: url("../img/jl.png") no-repeat;
+    font-size: 15px;
+    color:#FFD431;
+    font-weight: bold;
+    width:auto;
+
+}
+.container #renWu .detail .LQ{
+    position: absolute;
+    right: 40px;
+    top:50%;
+    margin-top: -18px;
+    display: inline-block;
+    width: 80px;
+    height: 36px;
+    border-radius: 5px;
+    background-color: #FF4C35;
+    color:white;
+    line-height: 36px;
+    text-align: center;
+    font-size: 16px;
+
+}
+.container #renWu .detail .overTime{
+    background:#DDD;
+}
+.container #renWu .detail .LQ:hover{
+    background-color: red;
+}
+.container #renWu .detail .overTime:hover{
+    background-color: #DDD;
+}
+.container #over{
+    position: absolute;
+    top:716px;
+    left:50%;
+    margin-left:-519px;
+}
+.container #over>a{
+    width: 1038px;
+    height:60px;
+    line-height: 60px;
+    font-size: 16px;
+    color:#000;
+    display: inline-block;
+    text-align: center;
+
+}
+.container #over>a:hover{
+    color: red;
+}
+/*搜索框样式*/
+
+/*搜索框大盒子*/
+#search{
+    height:69px;
+    width:100%;
+    background:rgba(0,0,0,0.4);
+    position: fixed;
+    bottom:-60px;
+    z-index: 7;
+
+}
+#search span{
+    display: inline-block;
+    width: 25px;
+    height: 30px;
+    background-color: rgba(134,134,149,0.3);
+    position: absolute;
+    left:150px;
+    bottom:10px;
+    padding:10px;
+
+}
+#search input{
+    border:1px solid #ccc;
+    height:40px;
+    width:500px;
+    position: absolute;
+    bottom:15px;
+    left:300px;
+    color:white;
+}
+#search button{
+    height:42px;
+    width:100px;
+    background-color: red;
+    position: absolute;
+    bottom:15px;
+    left:800px;
+    color:white;
+    font-size: 14px;
+    border:0;
+}
+
+

@@ -1,0 +1,250 @@
+/* ----------网站的头部 start ---------- */
+
+#head{
+    height: 150px;
+    background-color: #cb0a11;
+}
+/*logo部分*/
+#head .container .logo{
+    height: 150px;
+    width: 300px;
+    /*background-color: aqua;*/
+}
+/*搜索框部分*/
+#head .container .search{
+    height: 95px;
+    width: 500px;
+    padding-top: 55px;
+    /*background-color: blue;*/
+    position: relative;
+}
+/*搜索框*/
+#head .container .search>input[type=text]{
+    width: 450px;
+    height: 35px;
+}
+/*按钮*/
+#head .container .search>input[type=button]{
+    width: 80px;
+    height: 35px;
+    background:#a8000f ;
+    font-size: 18px;
+    color:#fff;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    margin-top:-18px;
+    border: none;
+    cursor: pointer
+}
+
+/*登录注册导航栏部分*/
+#head .container .login{
+    height: 85px;
+    width: 400px;
+    padding-top: 65px;
+    /*background-color: chartreuse;*/
+}
+#head .container .login ul li{
+    float: right;
+    color: #fff;
+    padding-left: 40px;
+    line-height: 27px;
+}
+#head .container .login ul li a{
+    color: #fff;
+}
+/*qq背景图*/
+#head .container .login ul li span.qq{
+     width: 28px;
+     height: 24px;
+     display: inline-block;
+     background: url("../img/qq.png") no-repeat 0 0;
+     margin-top: -10px;
+ }
+/*微博背景图*/
+#head .container .login ul li span.weibo{
+    width: 28px;
+    height: 24px;
+    display: inline-block;
+    background: url("../img/qq.png") no-repeat 0 -32px;
+    margin-top: -10px;
+}
+
+/*整体浮动*/
+#head .container .f{
+    float: left;
+}
+
+/*网站的头部 end*/
+
+/*导航部分 start*/
+#nav {
+    height: 100px;
+    background: #fff;
+    /*border-bottom: 1px solid ;*/
+    box-shadow: 0px 0px 10px #000;
+}
+#nav .container .daohang ul li{
+    float: left;
+    /*margin-right: 30px;*/
+    height: 95px;
+    width: 100px;
+    text-align: center;
+}
+#nav .container {
+    position: relative;
+}
+
+#nav .container .daohang ul li:hover{
+    border-bottom: 5px solid red;
+    background-color: #f2f2f2;
+}
+#nav .container .xiala2{
+    position: absolute;
+    background-color: #f2f2f2;
+    top:100px;
+    left: 181px;
+}
+#nav .container .daohang ul li span{
+    font-size: 15px;
+    padding-left: 2px;
+    display: inline-block;
+}
+#nav .container .daohang ul li a{
+    height: 100px;
+    line-height: 100px;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+}
+#nav .container  .cxmw{
+    float: right;
+}
+/*导航部分end*/
+
+/*脚部  start*/
+
+#footer{
+    background: #3f3a32;
+    height: 500px;
+
+
+}
+/*脚步上半部分*/
+#footer .container .top{
+    padding-top: 20px;
+    color: #fff;
+}
+/*脚步上半部分logo部分*/
+#footer .container .top>.logo{
+    float: left;
+    width: 609px;
+}
+#footer .container .top>.logo ul li{
+    padding-top: 5px;
+    /*font-size: 15px;*/
+}
+#footer .container .top>.logo ul li span{
+    color: #ff3232;
+    font-size: 15px;
+}
+/*脚步上半部分二维码部分*/
+#footer .container .top .erweima{
+    float: left;
+    padding-top: 30px;
+}
+#footer .container .top .erweima ul li{
+    float: left;
+    margin-right: 62px;
+}
+#footer .container .top .erweima ul li:last-child{
+    margin-right: 0;
+}
+#footer .container .top .erweima ul li div{
+    text-align: center;
+    height: 150px;
+    width: 105px;
+}
+#footer .container .top .erweima ul li .gfwb>a{
+    background: url("../img/erweima.png") no-repeat 0 0;
+    display: inline-block;
+    width: 105px;
+    height: 30px;
+    padding-top: 85px;
+    color: #fff;
+}
+#footer .container .top .erweima ul li .qqkj>a{
+    background: url("../img/erweima.png") no-repeat -105px 0 ;
+    display: inline-block;
+    width: 105px;
+    height: 30px;
+    padding-top: 85px;
+    color: #fff;
+}
+#footer .container .top .erweima ul li .wxhy{
+    background: url("../img/erweima.png") no-repeat -210px 0 ;
+    display: inline-block;
+    width: 105px;
+    height: 0px;
+    padding-top: 115px;
+    color: #fff;
+}
+#footer .container .top .erweima ul li .sjkhd{
+    background: url("../img/erweima.png") no-repeat -315px 0 ;
+    display: inline-block;
+    width: 105px;
+    height: 0px;
+    padding-top: 115px;
+    color: #fff;
+}
+/* 底部下半部分*/
+/*友情链接*/
+#footer .container .down .youqing{
+    color: #ffffff;
+    float: left;
+    margin-top: 50px;
+    height: 20px;
+}
+#footer .container .down .youqing hr{
+    width: 1225px;
+    margin-top: 10px;
+    background-color: #666666;
+    border: none;
+    height: 1px;
+}
+#footer .container .down .lianjie{
+    padding-top: 90px;
+
+}
+#footer .container .down .lianjie a{
+    margin-right: 40px;
+    margin-top: 10px;
+    display: inline-block;
+}
+#footer .container .down  hr{
+    width: 1225px;
+    margin-top: 10px;
+    background-color: #666666;
+    border: none;
+    height: 1px;
+}
+#footer .container .down .lianjie2 a{
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: center;
+    height: 20px;
+    vertical-align: middle;
+    line-height: 20px;
+    display: inline-block;
+}
+#footer .container .down .lianjie2 a:first-child{
+    margin-left: 240px;
+}
+#footer .container .down .bianhao{
+    text-align: center;
+    color: #666666;
+}
+
+
+/* 脚部 end*/

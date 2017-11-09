@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+em,i {
+    font-style: normal;
+}
+
+li {
+    list-style: none
+}
+
+img {
+    border: 0;
+    vertical-align: middle
+}
+
+button {
+    cursor: pointer
+}
+
+a {
+    color: #666;
+    text-decoration: none
+
+}
+
+
+/*a:hover {*/
+    /*color: #c81623*/
+/*}*/
+
+button,input {
+    font-family: Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background-color: #fae8c8;
+    font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;
+    color: #ccc;
+  /*  background-image: url("../img/bg.png");
+    background-size: cover;*/
+}
+
+
+
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+.clearfix {
+    *zoom: 1
+}
+
+/* °æÐÄ */
+.container {
+    width: 1225px;
+    margin:0 auto;
+}
+
+
+
+
+

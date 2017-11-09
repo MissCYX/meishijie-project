@@ -1,0 +1,638 @@
+/* ----------网站的头部 start ---------- */
+
+#head{
+    height: 150px;
+    background-color: #cb0a11;
+}
+/*logo部分*/
+#head .container .logo{
+    height: 150px;
+    width: 300px;
+    /*background-color: aqua;*/
+}
+/*搜索框部分*/
+#head .container .search{
+    height: 95px;
+    width: 500px;
+    padding-top: 55px;
+    /*background-color: blue;*/
+    position: relative;
+}
+/*搜索框*/
+#head .container .search>input[type=text]{
+    width: 450px;
+    height: 35px;
+}
+/*按钮*/
+#head .container .search>input[type=button]{
+    width: 80px;
+    height: 35px;
+    background:#a8000f ;
+    font-size: 18px;
+    color:#fff;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    margin-top:7px;
+    border: none;
+    cursor: pointer
+}
+
+/*登录注册导航栏部分*/
+#head .container .login{
+    height: 85px;
+    width: 400px;
+    padding-top: 65px;
+    /*background-color: chartreuse;*/
+}
+#head .container .login ul li{
+    float: right;
+    color: #fff;
+    padding-left: 40px;
+    line-height: 27px;
+}
+#head .container .login ul li a{
+    color: #fff;
+}
+/*qq背景图*/
+#head .container .login ul li span.qq{
+     width: 28px;
+     height: 24px;
+     display: inline-block;
+     background: url("../img/qq.png") no-repeat 0 0;
+     margin-top: -10px;
+ }
+/*微博背景图*/
+#head .container .login ul li span.weibo{
+    width: 28px;
+    height: 24px;
+    display: inline-block;
+    background: url("../img/qq.png") no-repeat 0 -32px;
+    margin-top: -10px;
+}
+
+/*整体浮动*/
+#head .container .f{
+    float: left;
+}
+
+/*网站的头部 end*/
+
+/*导航部分 start*/
+#nav {
+    height: 100px;
+    background: #fff;
+    /*border-bottom: 1px solid ;*/
+    box-shadow: 0px 0px 10px #000;
+}
+#nav .container .daohang ul li{
+    float: left;
+    /*margin-right: 30px;*/
+    height: 95px;
+    width: 100px;
+    text-align: center;
+}
+#nav .container {
+    position: relative;
+}
+
+#nav .container .daohang ul li:hover{
+    border-bottom: 5px solid red;
+    background-color: #f2f2f2;
+}
+#nav .container .xiala2{
+    position: absolute;
+    background-color: #f2f2f2;
+    top:100px;
+    left: 181px;
+}
+#nav .container .daohang ul li span{
+    font-size: 15px;
+    padding-left: 2px;
+    display: inline-block;
+}
+#nav .container .daohang ul li a{
+    height: 100px;
+    line-height: 100px;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+}
+#nav .container  .cxmw{
+    float: right;
+}
+/*导航部分end*/
+
+/*banner start*/
+
+
+#banner .shutter {
+    overflow: hidden;
+    width: 100%;
+    height: 360px;
+    position: relative;
+    margin: 2px auto;
+    border-radius: 10px;
+
+}
+#banner .shutter-img {
+    z-index: 1;
+}
+.shutter-img,
+#banner .shutter-img a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+#banner .shutter-img a {
+    cursor: default;
+}
+#banner .shutter-img a > img {
+    width: 100%;
+    height: 100%;
+}
+#banner .shutter-img .created {
+    overflow: hidden;
+    position: absolute;
+    z-index: 20;
+}
+#banner .shutter-btn {}
+#banner .shutter-btn li {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    width: 49px;
+    height: 49px;
+    margin-top: -25px;
+    cursor: pointer;
+}
+#banner .shutter-btn li.prev {
+    left: 20px;
+    background: url(../img/shutter_prevBtn.png) no-repeat 0 -49px;
+}
+#banner .shutter-btn li.next {
+    right: 20px;
+    background: url(../img/shutter_nextBtn.png) no-repeat 0 -49px;
+}
+#banner .shutter-desc {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 36px;
+    background: url(../img/shutter_shadow.png) repeat;
+}
+#banner .shutter-desc p {
+    padding-left: 20px;
+    line-height: 36px;
+    color: #fff;
+    font-size: 14px;
+}
+
+/*banner end*/
+
+
+/*美食热点 start*/
+
+
+#footHot .container .h2 {
+    text-align: center;
+    display: inline-block;
+    height: 30px;
+    margin-top: 35px;
+    margin-left: 590px;
+    color: #666666;
+}
+#footHot .container .oh{
+    margin-left: 590px;
+}
+#footHot .container .fhtu{
+    margin-top: 20px;
+}
+#footHot .container .fhtu .fhleft{
+    width: 335px; ;
+    height: 580px;
+    display: inline-block;
+    float: left;
+
+}
+#footHot .container .fhtu .fhright .fhr-top{
+    height: 310px;
+}
+#footHot .container .fhtu .fhright .fhr-top a{
+    display: inline-block;
+    float: right;
+    margin-left: 40px;
+    position: relative;
+}
+#footHot .container .fhtu .fhright .fhr-top a div{
+    height: 45px;
+    width: 270px;
+    background-color:  rgba(0,0,0,0.5);
+    position: absolute;
+    bottom: 0px;
+    color: #ffffff;
+    line-height: 45px;
+    text-align: center;
+    font-size: 16px;
+    overflow: hidden;
+}
+#footHot .container .fhtu .fhright .fhr-top a:last-child {
+    margin-left: 0px;
+}
+#footHot .container .fhtu .fhright .fhr-bottom {
+    height: 270px;
+    width: 890px;
+    float: right;
+    display: inline-block;
+    margin-top: 20px;
+}
+#footHot .container .fhtu .fhright .fhr-bottom img{
+    margin-left: 100px;
+}
+
+/*美食热点  end*/
+
+/*餐厅推荐 start*/
+
+#cttj .container .h2{
+    margin-left: 600px;
+    color: #666666;
+    margin-top: 35px;
+}
+
+#cttj .container .for{
+    margin-left: 520px;
+}
+
+#cttj .container .cttu .cttu-top{
+    margin-top: 20px;
+    height: 322px;
+
+}
+#cttj .container .cttu .cttu-top a div{
+    height: 45px;
+    width: 270px;
+    background-color:  rgba(0,0,0,0.5);
+    position: absolute;
+    bottom: 0px;
+    color: #ffffff;
+    line-height: 45px;
+    text-align: center;
+    font-size: 16px;
+    overflow: hidden;
+}
+#cttj .container .cttu .cttu-top a{
+    display: inline-block;
+    float: left;
+    margin-right: 52px;
+    position: relative;
+}
+#cttj .container .cttu .cttu-top a:last-child{
+    margin-right: 0px;
+}
+#cttj .container .cttu .cttu-bottom a{
+    display: inline-block;
+    float: left;
+    margin-right: 48px;
+    position: relative;
+ }
+#cttj .container .cttu .cttu-bottom a div{
+    height: 45px;
+    width: 270px;
+    background-color:  rgba(0,0,0,0.5);
+    position: absolute;
+    bottom: 0px;
+    color: #ffffff;
+    line-height: 45px;
+    text-align: center;
+    font-size: 16px;
+    overflow: hidden;
+}
+#cttj .container .cttu .cttu-bottom a:last-child{
+    margin-right: 0px;
+}
+
+/*餐厅推荐 end*/
+
+/*活动热点 start*/
+#hdrd .container .h2{
+    margin-left: 590px;
+    color: #666666;
+    margin-top: 35px;
+}
+#hdrd .container .city{
+    margin-left: 600px;
+}
+#hdrd .container .sfq{
+    height: 290px;
+    /*border: solid 1px;*/
+    /*background: red;*/
+    margin-top: 30px;
+}
+#hdrd .container .sfq .demo li:nth-of-type(1) img { transform: translate(-210px); }
+#hdrd .container .sfq .demo li:nth-of-type(2) img { transform: translate(-180px); }
+#hdrd .container .sfq .demo li:nth-of-type(3) img { transform: translate(-380px); }
+#hdrd .container .sfq .demo li:nth-of-type(4) img { transform: translate(-450px); }
+#hdrd .container .sfq .demo li:nth-of-type(5) img { transform: translate(-320px); }
+#hdrd .container .sfq .demo {  height: 270px; margin: 20px auto 0 auto; }
+#hdrd .container .sfq .demo img { width: 820px; height: 270px; max-width: 820px; }
+#hdrd .container .sfq .demo li { float: left; position: relative; width: 100px; height: 100%; overflow: hidden; cursor: pointer; transition: 0.5s; transform-origin: bottom; filter: alpha(opacity=50); opacity: 0.5; }
+#hdrd .container .sfq .demo li img { transition: 1.2s; }
+#hdrd .container .sfq .demo li a { display: block; }
+#hdrd .container .sfq .demo li div { position: absolute; bottom: 0; left: 0; width: 100%; background: #000; line-height: 32px; filter: alpha(opacity=70); opacity: 0.7; text-indent: 2em; }
+#hdrd .container .sfq .demo li div a { color: #FFF; text-decoration: none; }
+#hdrd .container .sfq .demo li div a:hover { color: #F00; text-decoration: none; }
+#hdrd .container .sfq .demo li.active { cursor: pointer; transform: scale(1.02, 1.08); z-index: 3; width: 820px; filter: alpha(opacity=100); opacity: 1; }
+#hdrd .container .sfq .demo li.active img { transform: translate(0px); }
+#hdrd .container .sfq .demo li:nth-of-type(1) { transform-origin: bottom left; }
+#hdrd .container .sfq .demo li:nth-of-type(5) { transform-origin: bottom right; }
+
+#hdrd .container .down{
+    margin-top: 32px;
+}
+#hdrd .container .down a div{
+    height: 45px;
+    width: 380px;
+    background-color:  rgba(0,0,0,0.5);
+    position: absolute;
+    bottom: 0px;
+    color: #ffffff;
+    line-height: 45px;
+    text-align: center;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+#hdrd .container .down a{
+    display: inline-block;
+    float: left;
+    height: 270px;
+    margin-right: 42px;
+    position: relative;
+}
+
+#hdrd .container .down a:last-child{
+    margin-right: 0px;
+}
+
+/*<!--活动热点 end-->*/
+
+
+/*热销 start*/
+#rexiao .container {
+    margin-top: 50px;
+}
+#rexiao .container .big{
+    height: 460px;
+    border: 3px solid #808080;
+    position: relative;
+}
+#rexiao .container .rexiaotu{
+    height: 25px;
+    width: 100px;
+    /*background-color:#fae8c8 ;*/
+    position: absolute;
+    left: 50%;
+    margin-left: 10px;
+    margin-top: -33px;
+    color: #666666;
+}
+#rexiao .container .top{
+    margin-top: 50px;
+}
+#rexiao .container .top div{
+    float: left;
+    margin-left: 23px;
+}
+#rexiao .container .top div:nth-child(2) a:first-child{
+    display: block;
+}
+#rexiao .container .top div:nth-child(3){
+    width: 360px;
+    height: 360px;
+    background-color: #ffffff;
+}
+#rexiao .container .top div:nth-child(3) a{
+    display: block;
+    width: 360px;
+    height: 180px;
+}
+#rexiao .container .top div:nth-child(3) a:last-child{
+    /*float: right;*/
+}
+#rexiao .container .top div a span{
+    font-size: 16px;
+
+}
+#rexiao .container .top div:nth-child(3) a span{
+    height: 180px;
+    width: 210px;
+    /*display: inline-block;*/
+}
+#rexiao .container .down div{
+    float: left;
+    margin-right: 300px;
+    margin-top: 10px;
+}
+#rexiao .container .down div:first-child{
+    margin-left: 30px;
+}
+#rexiao .container .down div:last-child{
+    margin-right: 0px;
+}
+#rexiao .container .down span{
+    font-size: 16px;
+    color: #323232;
+}
+
+/*热销 end*/
+
+/*论坛热帖 start*/
+
+#luntan .container{
+    margin-top: 50px;
+}
+#luntan .container div{
+    float: left;
+    height: 400px;
+
+}
+#luntan .container div:first-child{
+    background-color: #96b921;
+    width: 412px;
+
+}
+#luntan .container div:last-child{
+    background-color: #63b9e2;
+    width: 412px;
+}
+
+#luntan .container .ltrt h2{
+    margin-top: 20px;
+    color: #ffffff;
+    margin-left: 20px;
+    height: 40px;
+}
+#luntan .container .ltrt ul li{
+    color: #ffffff;
+    font-size: 16px;
+    margin-left: 20px;
+    height: 40px;
+}
+#luntan .container .ltrt ul li a{
+    color: #ffffff;
+    /*text-decoration: ;*/
+}
+#luntan .container .rmwd h2{
+    margin-top: 20px;
+    color: #ffffff;
+    margin-left: 20px;
+    height: 40px;
+}
+#luntan .container .rmwd ul li{
+    color: #ffffff;
+    font-size: 16px;
+    margin-left: 20px;
+    height: 40px;
+}
+#luntan .container .rmwd ul li a{
+    color: #ffffff;
+}
+
+/*论坛热帖 end*/
+
+/*底部图片 start*/
+
+#dt{
+    margin-top: 50px;
+}
+
+/*底部图片 end*/
+
+/*脚部  start*/
+
+#footer{
+    /*margin-top: 20px;*/
+    background: #3f3a32;
+    height: 530px;
+}
+/*脚步上半部分*/
+#footer .container .top{
+    padding-top: 20px;
+    color: #fff;
+}
+/*脚步上半部分logo部分*/
+#footer .container .top>.logo{
+    float: left;
+    width: 609px;
+}
+#footer .container .top>.logo ul li{
+    padding-top: 5px;
+    /*font-size: 15px;*/
+}
+#footer .container .top>.logo ul li span{
+    color: #ff3232;
+    font-size: 15px;
+}
+/*脚步上半部分二维码部分*/
+#footer .container .top .erweima{
+    float: left;
+    padding-top: 30px;
+}
+#footer .container .top .erweima ul li{
+    float: left;
+    margin-right: 62px;
+}
+#footer .container .top .erweima ul li:last-child{
+    margin-right: 0;
+}
+#footer .container .top .erweima ul li div{
+    text-align: center;
+    height: 150px;
+    width: 105px;
+}
+#footer .container .top .erweima ul li .gfwb>a{
+    background: url("../img/erweima.png") no-repeat 0 0;
+    display: inline-block;
+    width: 105px;
+    height: 30px;
+    padding-top: 85px;
+    color: #fff;
+}
+#footer .container .top .erweima ul li .qqkj>a{
+    background: url("../img/erweima.png") no-repeat -105px 0 ;
+    display: inline-block;
+    width: 105px;
+    height: 30px;
+    padding-top: 85px;
+    color: #fff;
+}
+#footer .container .top .erweima ul li .wxhy{
+    background: url("../img/erweima.png") no-repeat -210px 0 ;
+    display: inline-block;
+    width: 105px;
+    height: 0px;
+    padding-top: 115px;
+    color: #fff;
+}
+#footer .container .top .erweima ul li .sjkhd{
+    background: url("../img/erweima.png") no-repeat -315px 0 ;
+    display: inline-block;
+    width: 105px;
+    height: 0px;
+    padding-top: 115px;
+    color: #fff;
+}
+/* 底部下半部分*/
+/*友情链接*/
+#footer .container .down .youqing{
+    color: #ffffff;
+    float: left;
+    margin-top: 50px;
+    height: 20px;
+}
+#footer .container .down .youqing hr{
+    width: 1225px;
+    margin-top: 10px;
+    background-color: #666666;
+    border: none;
+    height: 1px;
+}
+#footer .container .down .lianjie{
+    padding-top: 90px;
+}
+#footer .container .down .lianjie a{
+    margin-right: 40px;
+    margin-top: 10px;
+    display: inline-block;
+}
+#footer .container .down  hr{
+    width: 1225px;
+    margin-top: 10px;
+    background-color: #666666;
+    border: none;
+    height: 1px;
+}
+#footer .container .down .lianjie2 a{
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: center;
+    height: 20px;
+    vertical-align: middle;
+    line-height: 20px;
+    display: inline-block;
+}
+#footer .container .down .lianjie2 a:first-child{
+    margin-left: 240px;
+}
+#footer .container .down .bianhao{
+    text-align: center;
+    color: #666666;
+}
+
+
+/* 脚部 end*/
